@@ -1,7 +1,6 @@
 import chess.Board;
 import chess.BoardCell;
 import chess.utils.FenUtils;
-import chess.utils.FigureType;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -38,8 +37,8 @@ public class ChessNotationTest {
 
   @Test
   public void testEmptyPosition() {
-    BoardCell cell = QUEENS_BOARD.getBoardCell(2, 2);
-    Assert.assertEquals(FigureType.QUEEN, cell.getFigure().getType());
+    BoardCell cell = QUEENS_BOARD.getBoardCell(5, 1);
+    Assert.assertTrue(cell.isEmpty());
   }
 
   @Test
